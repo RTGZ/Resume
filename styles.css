@@ -44,27 +44,31 @@ header h1 {
 }
 
 /* Base Styles for Navbar */
+/* Centering content in the navbar */
 nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111; /* Dark background for the navbar */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  background-color: #111;
   padding: 15px 20px;
+  position: relative;
 }
 
 nav .logo {
   font-size: 24px;
   color: white;
-  padding-left: 20px; /* Adds space on the left side */
+  margin-right: 20px; /* Adds space between name and navigation links */
 }
 
+/* Align the navigation links to the right of the logo */
 nav ul {
   display: flex;
   list-style: none;
+  margin-left: 0;
   padding: 0;
-  margin-left: 0; /* Make sure it's not offset */
 }
 
+/* Ensure the nav links are centered as well */
 nav li {
   margin-left: 20px;
 }
@@ -73,61 +77,37 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px;
 }
 
-/* Hide menu items on mobile by default */
-nav ul {
-  display: flex;
-}
-
-#hamburger-icon {
-  display: none; /* Hidden by default */
-  cursor: pointer;
-  position: absolute; /* Position it absolutely */
-  right: 20px; /* Right-aligned */
-}
-
-#hamburger-icon span {
-  font-size: 30px;
-  color: white;
-}
-
-/* Mobile Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
-  /* Hide the normal navbar on small screens */
-  nav ul {
-    display: none; /* Hide the links by default */
-    width: 100%;
-    text-align: center;
-    flex-direction: column;
-    background-color: #111;
-    padding-top: 10px;
-    position: absolute;
-    top: 60px; /* Position below the navbar */
-    left: 0;
-  }
-
-  /* Show the hamburger menu icon on small screens */
+  /* Show hamburger icon on mobile */
   #hamburger-icon {
-    display: block; /* Show hamburger icon on mobile */
+    display: block;
   }
 
-  /* When the hamburger menu is clicked, show the nav items */
+  /* Hide the menu items by default on mobile */
+  nav ul {
+    display: none;
+  }
+
+  /* Show the menu when the hamburger is clicked */
   nav ul.show {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
   }
 
   nav li {
     margin-left: 0;
-    margin-bottom: 10px; /* Add space between items */
-  }
-
-  nav a {
-    font-size: 20px;
-    padding: 15px 0;
+    margin-bottom: 10px;
   }
 }
+
 /* Hero Section */
 #hero {
     background: url('https://via.placeholder.com/1920x600') center/cover no-repeat;
