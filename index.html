@@ -9,20 +9,22 @@
     <meta name="description" content="A passionate and creative marketing intern applicant with a flair for innovative marketing strategies.">
 </head>
 <body>
-    <header id="navbar">
-        <div class="container">
-            <h1>Rishit Gunjikar</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#activities">Activities</a>
-                <a href="#volunteering">Volunteering</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+  <div class="logo">
+    <h1>Your Name</h1>
+  </div>
+  <nav>
+    <div class="hamburger-menu" id="hamburger-icon">
+      <span>&#9776;</span> <!-- Hamburger icon -->
+    </div>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
     <section id="hero">
         <div class="hero-content">
@@ -166,3 +168,11 @@ Contributed to environmental awareness initiatives and community clean-up drives
     </footer>
 </body>
 </html>
+<script>
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburgerIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
