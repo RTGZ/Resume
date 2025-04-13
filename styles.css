@@ -46,7 +46,7 @@ header h1 {
 /* Base Styles for Navbar */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #111; /* Dark background for the navbar */
   padding: 15px 20px;
@@ -55,7 +55,7 @@ nav {
 nav .logo {
   font-size: 24px;
   color: white;
-  padding-left: 30px; /* Adds space on the left side */
+  padding-left: 20px; /* Adds space on the left side */
 }
 
 nav ul {
