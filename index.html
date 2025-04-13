@@ -177,8 +177,16 @@ Contributed to environmental awareness initiatives and community clean-up drives
 <script>
   const hamburgerIcon = document.getElementById("hamburger-icon");
   const navLinks = document.getElementById("nav-links");
+  const links = document.querySelectorAll('nav a'); // Select all anchor links in the navigation
 
   hamburgerIcon.addEventListener("click", () => {
     navLinks.classList.toggle("show");
+  });
+
+  // Add an event listener to each link to close the menu when clicked
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show"); // Hide the menu when any link is clicked
+    });
   });
 </script>
