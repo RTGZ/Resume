@@ -74,31 +74,53 @@ nav a {
   padding: 10px;
 }
 
+/* Hide menu items on mobile by default */
+nav ul {
+  display: flex;
+}
+
+#hamburger-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+#hamburger-icon span {
+  font-size: 30px;
+  color: white;
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Stack logo and links vertically */
-    align-items: center; /* Center the logo and nav links */
+  /* Hide the normal navbar on small screens */
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #111; /* Dark background for the menu */
+    padding-top: 10px;
   }
 
-  nav ul {
+  /* Show the hamburger menu icon on small screens */
+  #hamburger-icon {
+    display: block;
+  }
+
+  /* When the hamburger menu is clicked, show the nav items */
+  nav ul.show {
     display: flex;
-    flex-direction: column; /* Stack nav items vertically */
-    text-align: center;
-    width: 100%;
   }
 
   nav li {
-    margin-left: 0; /* Remove left margin on small screens */
+    margin-left: 0; /* Remove left margin */
     margin-bottom: 10px; /* Add space between items */
   }
 
   nav a {
-    font-size: 20px; /* Make the links slightly bigger */
-    padding: 15px 0; /* Add padding for better touch interaction */
+    font-size: 20px;
+    padding: 15px 0; /* Better touch interaction padding */
   }
 }
-
 
 /* Hero Section */
 #hero {
