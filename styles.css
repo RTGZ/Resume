@@ -82,6 +82,8 @@ nav ul {
 #hamburger-icon {
   display: none; /* Hidden by default */
   cursor: pointer;
+  position: absolute; /* Position it absolutely within the nav */
+  right: 20px; /* Move it to the right */
 }
 
 #hamburger-icon span {
@@ -99,11 +101,14 @@ nav ul {
     flex-direction: column;
     background-color: #111; /* Dark background for the menu */
     padding-top: 10px;
+    position: absolute; /* Position it absolutely to take over the full width */
+    top: 60px; /* Position below the navbar */
+    left: 0;
   }
 
   /* Show the hamburger menu icon on small screens */
   #hamburger-icon {
-    display: block;
+    display: block; /* Show the hamburger icon */
   }
 
   /* When the hamburger menu is clicked, show the nav items */
@@ -121,7 +126,6 @@ nav ul {
     padding: 15px 0; /* Better touch interaction padding */
   }
 }
-
 /* Hero Section */
 #hero {
     background: url('https://via.placeholder.com/1920x600') center/cover no-repeat;
