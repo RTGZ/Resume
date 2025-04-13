@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
 div {
   padding-left: 8px;
+padding-right: 8px;
 }
 }
 
@@ -102,7 +103,7 @@ footer {
     right: 0;
     width: 100%;
     background-color: #1f1f1f;
-    padding: 1rem;
+    padding: 3rem;
     z-index: 999;
   }
 
