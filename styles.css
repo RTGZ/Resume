@@ -43,16 +43,62 @@ header h1 {
     font-size: 2rem;
 }
 
-header nav a {
-    color: white;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+/* Base Styles for Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111; /* Dark background for the navbar */
+  padding: 15px 20px;
 }
 
-header nav a:hover {
-    color: #4CAF50;
+nav .logo {
+  font-size: 24px;
+  color: white;
 }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack logo and links vertically */
+    align-items: center; /* Center the logo and nav links */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Stack nav items vertically */
+    text-align: center;
+    width: 100%;
+  }
+
+  nav li {
+    margin-left: 0; /* Remove left margin on small screens */
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+  nav a {
+    font-size: 20px; /* Make the links slightly bigger */
+    padding: 15px 0; /* Add padding for better touch interaction */
+  }
+}
+
 
 /* Hero Section */
 #hero {
