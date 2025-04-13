@@ -23,53 +23,48 @@ a {
 }
 
 /* Navbar */
-/* Centering the content inside the header */
-#navbar {
+header {
+position: sticky;
+top: 0;
+    background-color: #333;
+    padding: 15px 0;
+    color: White;
+}
+
+header .container {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100px; /* Adjust height as needed */
-    background-color: #111;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center; /* Centers the h1 element horizontally */
-    align-items: center; /* Centers the h1 element vertically */
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
 }
-
-h1 {
-    color: white;
-    font-size: 36px; /* Adjust font size as needed */
-}
-
 
 /* Base Styles for Navbar */
-/* Centering content in the navbar */
 nav {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  background-color: #111;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111; /* Dark background for the navbar */
   padding: 15px 20px;
-  position: relative;
 }
 
 nav .logo {
   font-size: 24px;
   color: white;
-  margin-right: 20px; /* Adds space between name and navigation links */
+  padding-left: 20px; /* Adds space on the left side */
 }
 
-/* Align the navigation links to the right of the logo */
 nav ul {
   display: flex;
   list-style: none;
-  margin-left: 0;
   padding: 0;
+  margin-left: 0; /* Make sure it's not offset */
 }
 
-/* Ensure the nav links are centered as well */
 nav li {
   margin-left: 20px;
 }
@@ -78,37 +73,61 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  padding: 10px;
 }
 
-/* Responsive styles */
+/* Hide menu items on mobile by default */
+nav ul {
+  display: flex;
+}
+
+#hamburger-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  position: absolute; /* Position it absolutely */
+  right: 20px; /* Right-aligned */
+}
+
+#hamburger-icon span {
+  font-size: 30px;
+  color: white;
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Show hamburger icon on mobile */
-  #hamburger-icon {
-    display: block;
-  }
-
-  /* Hide the menu items by default on mobile */
+  /* Hide the normal navbar on small screens */
   nav ul {
-    display: none;
+    display: none; /* Hide the links by default */
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #111;
+    padding-top: 10px;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    left: 0;
   }
 
-  /* Show the menu when the hamburger is clicked */
+  /* Show the hamburger menu icon on small screens */
+  #hamburger-icon {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  /* When the hamburger menu is clicked, show the nav items */
   nav ul.show {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #111;
   }
 
   nav li {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+  nav a {
+    font-size: 20px;
+    padding: 15px 0;
   }
 }
-
 /* Hero Section */
 #hero {
     background: url('https://via.placeholder.com/1920x600') center/cover no-repeat;
