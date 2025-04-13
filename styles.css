@@ -55,14 +55,12 @@ nav {
 nav .logo {
   font-size: 24px;
   color: white;
-  padding-left: 20px; /* Adds space on the left side */
 }
 
 nav ul {
   display: flex;
   list-style: none;
   padding: 0;
-  margin-left: 0; /* Make sure it's not offset */
 }
 
 nav li {
@@ -84,8 +82,8 @@ nav ul {
 #hamburger-icon {
   display: none; /* Hidden by default */
   cursor: pointer;
-  position: absolute; /* Position it absolutely */
-  right: 20px; /* Right-aligned */
+  position: absolute; /* Position it absolutely within the nav */
+  right: 20px; /* Move it to the right */
 }
 
 #hamburger-icon span {
@@ -97,20 +95,20 @@ nav ul {
 @media (max-width: 768px) {
   /* Hide the normal navbar on small screens */
   nav ul {
-    display: none; /* Hide the links by default */
+    display: none;
     width: 100%;
     text-align: center;
     flex-direction: column;
-    background-color: #111;
+    background-color: #111; /* Dark background for the menu */
     padding-top: 10px;
-    position: absolute;
+    position: absolute; /* Position it absolutely to take over the full width */
     top: 60px; /* Position below the navbar */
     left: 0;
   }
 
   /* Show the hamburger menu icon on small screens */
   #hamburger-icon {
-    display: block; /* Show hamburger icon on mobile */
+    display: block; /* Show the hamburger icon */
   }
 
   /* When the hamburger menu is clicked, show the nav items */
@@ -119,13 +117,13 @@ nav ul {
   }
 
   nav li {
-    margin-left: 0;
+    margin-left: 0; /* Remove left margin */
     margin-bottom: 10px; /* Add space between items */
   }
 
   nav a {
     font-size: 20px;
-    padding: 15px 0;
+    padding: 15px 0; /* Better touch interaction padding */
   }
 }
 /* Hero Section */
